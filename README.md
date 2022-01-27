@@ -46,8 +46,8 @@ This program was developed in 2019. Further improvements will be made in the nea
 
 # Known issues
 1. PCL visualization do not align the registered point clouds well ([Bad graphics](https://github.com/PointCloudLibrary/pcl/issues/3261#issuecomment-518360537)). See below figures:
-| View 1 | View 2 | Imagesiew 3 |
-| --- | --- | --- |
+| View 1 | View 2 | View 3 |
+| ------ | ------ | ------ |
 | ![01](https://user-images.githubusercontent.com/28588878/151403140-1683e335-2872-44d7-9d7c-10954e88bc95.png) | ![02](https://user-images.githubusercontent.com/28588878/151403161-9a6afc89-002c-449b-af6f-b016498152fc.png) | ![03](https://user-images.githubusercontent.com/28588878/151403185-f67fa9a2-000c-4193-804f-756df9841d92.png) |
 
 
