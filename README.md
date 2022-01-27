@@ -37,3 +37,8 @@ Also depending on your point cloud complexity the hyperparameters (keypoints and
 #define nr_scales_per_octave 5
 #define min_contrast 0.25
 ```
+
+Lastly, comment/uncomment relevant lines in the `void compute_Initial_Transformation` function when various Estimations and their corresponding Find correspondences between keypoint are used.
+
+# Note
+This program was developed in 2019. Further improvements will be made in the near future.
