@@ -10,7 +10,7 @@ Tested on Visual Studio 2017 and 2019
 Run the C/C++ program: `two_pointcloud_registration.cpp`. Change the below variables:
 |                                                      From                                                      |                                     To                                    |
 |:--------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------:|
-| ```cpp string src_file = "Plate_no_change_500000_scaled.pcd"; string tgt_file = "Plate_change_500000.pcd"; ``` | ```cpp string src_file = "bunny.pcd"; string tgt_file = "bunny2.pcd"; ``` |
+| ```string src_file = "Plate_no_change_500000_scaled.pcd"; string tgt_file = "Plate_change_500000.pcd"; ``` | ```string src_file = "bunny.pcd"; string tgt_file = "bunny2.pcd";``` |
 | `string src_tgt_filepath = "D:\\OneDrive\\Team Work\\Team PCloud\\3D models\\PCL\\";`                          | `string src_tgt_filepath = your\directory`                                |
 
 Also depending on your point cloud complexity the hyperparameters (keypoints and correspondences) should be changed,
