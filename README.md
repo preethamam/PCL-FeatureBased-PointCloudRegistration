@@ -1,6 +1,8 @@
 # PCL-FeatureBased-PointCloudRegistration
 A computer program on PCL framework to register two point clouds using the feature-based keypoints (SIFT, SHOT, FPFH).
 
+## Two point clouds registration with SIFT keypoints
+
 # Requirements
 [PCL library](https://github.com/PointCloudLibrary/pcl) <br/>
 C/C++ compiler (Visual Studio) <br/>
@@ -41,6 +43,13 @@ Also depending on your point cloud complexity the hyperparameters (keypoints and
 
 Lastly, comment/uncomment relevant lines in the `void compute_Initial_Transformation` function when various Estimations and their corresponding Find correspondences between keypoint are used.
 
+## Two point clouds registration with all possible working keypoints, local and global descriptors, correspondences estimation and rejections
+
+# Requirements
+
+# Usage
+
+----
 # Note
 This program was developed in 2019. Further improvements will be made in the near future.
 
