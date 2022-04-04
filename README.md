@@ -190,7 +190,7 @@ Considering the unfixed bugs for PCL library, we use Open3d to do the visualizat
 python registration_visualization.py
 ```
 
-# Experinment and results
+# Experimental results
 - Evalutation
 ```
 Num of successful combinations:  560 / 2016
