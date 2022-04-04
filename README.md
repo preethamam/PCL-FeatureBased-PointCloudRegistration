@@ -44,10 +44,165 @@ Also depending on your point cloud complexity the hyperparameters (keypoints and
 Lastly, comment/uncomment relevant lines in the `void compute_Initial_Transformation` function when various Estimations and their corresponding Find correspondences between keypoint are used.
 
 ## Two point clouds registration with all possible working keypoints, local and global descriptors, correspondences estimation and rejections
+# Introduction
+- The original program has been prompted to a multiprocess program to run all the possible combinations of the functions provided for feature based point cloud registration<br/>
+- User can easily achieve the result by following the hyperparameters provided by us, or user is free to change and test by modifying them<br/>
+- The evaluation script and visulization script are also been included to find the good combinations and display the result for the registration
 
 # Requirements
+Ubuntu (20.04)<br/>
+[PCL library 1.12.1](https://github.com/PointCloudLibrary/pcl)<br/>
+Cmake (3.16.3 or higher)<br/>
+open3d 
+```
+pip install open3d
+```
 
 # Usage
+- Prepare the directory for the program
+```
+|--your work directory
+|  |--your dataset
+|  |  |--source_pointcloud0.pcd
+|  |  |--target_pointcloud0.pcd
+|  |  |--source_pointcloud1.pcd
+|  |  |--target_pointcloud1.pcd
+|  |  |--.......
+|  |--two_pointcloud_registration.cpp (main program)
+|  |--ret (path to store the log and reuslts)
+|  |--include.h (all the header files)
+|  |--functions (implementation of all the functions)
+|  |--run.sh (bash script to run the program)
+|  |--evalution.py
+|  |--registration_visualization.py
+```
+- Compile the source code
+```
+cd your work directory
+mkdir build&&cd build
+cmake ..
+make -j8
+```
+
+- Run the code
+User can run all the combinations by running the following command
+```
+cd your work directory
+bash run.sh
+```
+User can also run single combination by running the following command
+```
+ ./build/project_two_pointcloud_registration --src "root path for dataset" --src_file "source pointcloud" --tgt_file "target point cloud" --normal "selection of normal computing function" --keypoint "selection of keypoints extrator" --feature "selection of feature descriptors" --correspondences "selection of finding correspondences" --reject "selection of rejecting bad correspondence" --ret "path to save the result"
+```
+- Changing the hyper parameters
+All the parameters in run.sh are free to change according to different purpose
+```
+normal=("omp" "normal")
+keypoint=("sift" "harries3d" "harries6d" "iss3d" "susan" "Trajkovic")
+feature=("fpfh" "pfh" "pfhrgb" "shot" "3dsc" "usc" "FPFHOMP" "principal" "cvfh" "ourcvfh" "gasd" "gasdcolor" "esf" "vfh")
+correspondences=("back" "normal" "default")
+reject=("distance" "median" "poly" "default")
+
+# root path for the dataset
+src=""
+# file path for source and target path
+src_file=""
+tgt_file=""
+# result path to store the log and results
+ret=""
+
+# Parameters for filtering
+LEAF_SIZE="0.1"
+# Parameters for sift
+min_scale="0.4"
+MinNeighbors="5"
+NumberOfThreads="4"
+
+# susan
+radius='0.1f'
+radiusSearch='0.1f'
+
+# Trajkovic
+FirstThreshold='0.00046f'
+SecondThreshold='0.03589'
+WindowSize='3'
+
+# harris_6d
+Threshold='0.01f'
+
+# normal 
+normal_radius="0.1"
+
+# RANSAC
+RANSAC_Inlier_Threshold=0.2
+RANSAC_Iterations=5000
+
+# ICP hyper parameters
+ICP_Iterations=10000
+ICP_TransformationEpsilon=1e-6
+ICP_EuclideanFitnessEpsilon=1
+ICP_RANSAC_Inlier_Threshold=0.001
+ICP_Max_Correspondence_Distance=0.4
+model_resolution="0.2"
+Threshold21="0.975"
+Threshold32="0.975"
+MinNeighbors="5"
+NumberOfThreads="4"
+
+# susan
+radius='0.1f'
+radiusSearch='0.1f'
+
+# Trajkovic
+FirstThreshold='0.00046f'
+SecondThreshold='0.03589'
+WindowSize='3'
+
+# harris_6d
+Threshold='0.01f'
+
+# normal 
+normal_radius="0.1"
+
+# RANSAC
+RANSAC_Inlier_Threshold=0.2
+RANSAC_Iterations=5000
+
+# ICP hyper parameters
+ICP_Iterations=10000
+ICP_TransformationEpsilon=1e-6
+ICP_EuclideanFitnessEpsilon=1
+ICP_RANSAC_Inlier_Threshold=0.001
+ICP_Max_Correspondence_Distance=0.4
+
+```
+# Evaluation
+```
+python evaluation.py
+```
+# Visualization
+Considering the unfixed bugs for PCL library, we use Open3d to do the visualization and acheive good results
+```
+python registration_visualization.py
+```
+
+# Experinment and results
+- Evalutation
+```
+Num of successful combinations:  560 / 2016
+Top 5 combinations are 
+Combinations:  normal.sift.ourcvfh.back.poly  Scores:  31.8838
+Combinations:  omp.sift.gasd.default.median  Scores:  31.8838
+Combinations:  normal.sift.gasd.back.median  Scores:  31.8838
+Combinations:  omp.sift.cvfh.default.median  Scores:  31.8838
+Combinations:  omp.sift.gasd.default.poly  Scores:  31.8838
+```
+- Visualization
+![image](https://github.com/preethamam/PCL-FeatureBased-PointCloudRegistration/blob/main/visualization_results/keypoints-Viewer.png)
+![image](https://github.com/preethamam/PCL-FeatureBased-PointCloudRegistration/blob/main/visualization_results/Correspondence-viewer.png)
+![image](https://github.com/preethamam/PCL-FeatureBased-PointCloudRegistration/blob/main/visualization_results/initial-registration.png)
+![image](https://github.com/preethamam/PCL-FeatureBased-PointCloudRegistration/blob/main/visualization_results/ICP-registration.png)
+
 
 ----
 # Note
