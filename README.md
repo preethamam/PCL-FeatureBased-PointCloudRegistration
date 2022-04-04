@@ -48,6 +48,10 @@ Lastly, comment/uncomment relevant lines in the `void compute_Initial_Transforma
 - The original program has been prompted to a multiprocess program to run all the possible combinations of the functions provided for feature based point cloud registration<br/>
 - User can easily achieve the result by following the hyperparameters provided by us, or user is free to change and test by modifying them<br/>
 - The evaluation script and visulization script are also been included to find the good combinations and display the result for the registration
+- The flowchart for the prpgram
+
+
+![image](https://github.com/preethamam/PCL-FeatureBased-PointCloudRegistration/blob/main/flowchart.png)
 
 # Requirements
 Ubuntu (20.04)<br/>
