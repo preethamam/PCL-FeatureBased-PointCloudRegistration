@@ -1,14 +1,14 @@
-# PCL-FeatureBased-PointCloudRegistration
+# PCL feature-based point cloud registration
 A computer program on PCL framework to register two point clouds using the feature-based keypoints (SIFT, SHOT, FPFH).
 
 ## Two point clouds registration with SIFT keypoints
 
-# Requirements
+## Requirements
 [PCL library](https://github.com/PointCloudLibrary/pcl) <br/>
 C/C++ compiler (Visual Studio) <br/>
 Tested on Visual Studio 2017 and 2019
 
-# Usage
+## Usage
 Run the C/C++ program: `two_pointcloud_registration.cpp`. Change the below variables:
 |                                                      From                                                      |                                     To                                    |
 |:--------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------:|
@@ -43,8 +43,8 @@ Also depending on your point cloud complexity the hyperparameters (keypoints and
 
 Lastly, comment/uncomment relevant lines in the `void compute_Initial_Transformation` function when various Estimations and their corresponding Find correspondences between keypoint are used.
 
-## Two point clouds registration with all possible working keypoints, local and global descriptors, correspondences estimation and rejections
-# Introduction
+# Two point clouds registration with all possible working keypoints, local and global descriptors, correspondences estimation and rejections
+## Introduction
 - The original program has been prompted to a multiprocess program to run all the possible combinations of the functions provided for feature based point cloud registration<br/>
 - User can easily achieve the result by following the hyperparameters provided by us, or user is free to change and test by modifying them<br/>
 - The evaluation script and visulization script are also been included to find the good combinations and display the result for the registration
@@ -53,7 +53,7 @@ Lastly, comment/uncomment relevant lines in the `void compute_Initial_Transforma
 
 ![image](https://github.com/preethamam/PCL-FeatureBased-PointCloudRegistration/blob/main/flowchart.png)
 
-# Requirements
+## Requirements
 Ubuntu (20.04)<br/>
 [PCL library 1.12.1](https://github.com/PointCloudLibrary/pcl)<br/>
 Cmake (3.16.3 or higher)<br/>
@@ -62,7 +62,7 @@ open3d
 pip install open3d
 ```
 
-# Usage
+## Usage
 - Prepare the directory for the program
 ```
 |--your work directory
@@ -180,17 +180,17 @@ ICP_RANSAC_Inlier_Threshold=0.001
 ICP_Max_Correspondence_Distance=0.4
 
 ```
-# Evaluation
+## Evaluation
 ```
 python evaluation.py
 ```
-# Visualization
+## Visualization
 Considering the unfixed bugs for PCL library, we use Open3d to do the visualization and acheive good results
 ```
 python registration_visualization.py
 ```
 
-# Experimental results
+## Experimental results
 - Evalutation
 ```
 Num of successful combinations:  560 / 2016
