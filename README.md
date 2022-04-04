@@ -209,9 +209,6 @@ Combinations:  omp.sift.gasd.default.poly  Scores:  31.8838
 
 
 ----
-# Note
-This program was developed in 2019. Further improvements will be made in the near future.
-
 # Known issues
 1. PCL visualization do not align the registered point clouds well ([Bad graphics](https://github.com/PointCloudLibrary/pcl/issues/3261#issuecomment-518360537)). See below figures:
 
