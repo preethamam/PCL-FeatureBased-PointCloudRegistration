@@ -204,8 +204,8 @@ Combinations:  omp.sift.gasd.default.poly  Scores:  31.8838
 - Visualization
 ![keypoints-Viewer](https://user-images.githubusercontent.com/90239950/161681138-2d2db002-d4ca-46af-930a-4098fd321742.png)
 ![Correspondence-viewer](https://user-images.githubusercontent.com/90239950/161681161-2352e709-c236-4db9-afc8-2a2074770120.png)
-![image](https://github.com/preethamam/PCL-FeatureBased-PointCloudRegistration/blob/main/visualization_results/initial-registration.png)
-![image](https://github.com/preethamam/PCL-FeatureBased-PointCloudRegistration/blob/main/visualization_results/ICP-registration.png)
+![Initial_Alignment](https://user-images.githubusercontent.com/90239950/161697823-d65bde47-6137-4d8a-9aa4-87f47db4f576.png)
+![ICP_Alignment](https://user-images.githubusercontent.com/90239950/161697948-e3bcee41-c99d-4565-a2a5-dd6dcfe53324.png)
 
 ----
 ## Computational time and space complexity
