@@ -1,5 +1,5 @@
 # PCL feature-based point cloud registration
-A computer program on PCL framework to register two point clouds using the feature-based keypoints (SIFT, SHOT, FPFH, etc.), local/global feature descriptors, followed by various correspondence estimation and rejection methods. Below summarizes the available keypoints, desciprtors, correspondence estimation and rejection methods that works in different combinations.
+A computer program on PCL framework to register two point clouds using the feature-based keypoints (SIFT, SHOT, FPFH, etc.), local/global feature descriptors, followed by various correspondence estimation and rejection methods. Below summarizes the available keypoints, descriptors, correspondence estimation and rejection methods that works in different combinations.
 
 ```
 May require Point Cloud Library (PCL) > 1.11.0 
