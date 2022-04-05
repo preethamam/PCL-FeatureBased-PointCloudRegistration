@@ -185,9 +185,26 @@ ICP_Max_Correspondence_Distance=0.4
 python evaluation.py
 ```
 ## Visualization
-Considering the unfixed bugs for PCL library, we use Open3d to do the visualization and acheive good results
+- Considering the unfixed bugs for PCL library, we use Open3d to do the visualization and acheive good results
 ```
 python registration_visualization.py
+```
+- Change the path according to your own directory
+```
+root_path = "/home/chaoyizh/workspace/SHM Lab/visualization_test1/"
+
+src_pcloud_filename = 'normal.sift.pfh.default.default.src_pcd.pcd'
+tgt_pcloud_filename = 'normal.sift.pfh.default.default.tgt_pcd.pcd'
+
+# keypoints
+
+src_keypoints_filename = 'normal.sift.pfh.default.default.src_keypoints_file.txt'
+tgt_keypoints_filename = 'normal.sift.pfh.default.default.tgt_keypoints_file.txt'
+src_good_keypoints_filename = 'normal.sift.pfh.default.default.src_good_keypoints_file.txt'
+tgt_good_keypoints_filename = 'normal.sift.pfh.default.default.tgt_good_keypoints_file.txt'
+initial_trans = "normal.sift.pfh.default.default.initial_transformation_matrix.txt"
+final_trans ="normal.sift.pfh.default.default.final_transformation_matrix.txt"
+
 ```
 
 ## Experimental results
