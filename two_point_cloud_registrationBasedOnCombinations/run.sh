@@ -66,15 +66,15 @@ Threshold='0.01f'
 normal_radius="0.1"
 
 # RANSAC
-RANSAC_Inlier_Threshold=0.2
-RANSAC_Iterations=5000
+RANSAC_Inlier_Threshold="0.2"
+RANSAC_Iterations="5000"
 
 # ICP hyper parameters
-ICP_Iterations=10000
-ICP_TransformationEpsilon=1e-6
-ICP_EuclideanFitnessEpsilon=1
-ICP_RANSAC_Inlier_Threshold=0.001
-ICP_Max_Correspondence_Distance=0.4
+ICP_Iterations="10000"
+ICP_TransformationEpsilon="1e-6"
+ICP_EuclideanFitnessEpsilon="1"
+ICP_RANSAC_Inlier_Threshold="0.001"
+ICP_Max_Correspondence_Distance="0.4"
 
 for n in ${normal[@]}
 do
