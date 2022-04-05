@@ -292,7 +292,7 @@ final_trans ="normal.sift.pfh.default.default.final_transformation_matrix.txt"
 ```
 
 ## Experimental results
-- Evalutation
+- Evaluation
 ```
 Num of successful combinations:  560 / 2016
 Top 5 combinations are 
