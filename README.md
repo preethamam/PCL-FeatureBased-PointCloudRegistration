@@ -219,4 +219,7 @@ Combinations:  omp.sift.gasd.default.poly  Scores:  31.8838
 ----
 # Authors
 1. Dr. Preetham Manjunatha
+Ph.D in Civil Engineering, M.S in Computer Science, M.S in Electrical Engineering and M.S in Civil Engineering, University of Southetn California.
+
 2. Chaoyi Zhou ([ChaoyiZh](https://github.com/ChaoyiZh))
+M.S in Computer Science, University of Southetn California.
