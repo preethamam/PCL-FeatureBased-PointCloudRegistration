@@ -5,12 +5,12 @@ correspondences=("back" "normal" "default")
 reject=("distance" "median" "poly" "default")
 
 # root path for the dataset
-src="/home/chaoyizh/workspace/SHM Lab/PCL-FeatureBased-PointCloudRegistration/"
+src=""
 # file path for source and target path
-src_file="Plate_no_change_500000_scaled.pcd"
-tgt_file="Plate_change_500000.pcd"
+src_file=""
+tgt_file=""
 # result path to store the log and results
-ret="/home/chaoyizh/workspace/SHM Lab/PCL-FeatureBased-PointCloudRegistration/ret"
+ret=""
 
 # Parameters for filtering
 LEAF_SIZE="0.1"
