@@ -121,7 +121,7 @@ Lastly, comment/uncomment relevant lines in the `void compute_Initial_Transforma
 - The original program has been prompted to a multiprocess program to run all the possible combinations of the functions provided for feature based point cloud registration. The code is in `two_pointcloud_registration_combinations`<br/>
 - User can easily achieve the result by following the hyperparameters provided by us, or user is free to change and test by modifying them<br/>
 - The evaluation script and visulization script are also been included to find the good combinations and display the result for the registration
-- The flowchart for the prpgram
+- The flowchart for the program
 
 
 ![flowchart](https://user-images.githubusercontent.com/90239950/161680597-b770b5eb-6597-48dc-99d2-99592cb9ad18.png)
