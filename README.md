@@ -216,5 +216,7 @@ Combinations:  omp.sift.gasd.default.poly  Scores:  31.8838
 |--------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
 | ![01](https://user-images.githubusercontent.com/28588878/151403140-1683e335-2872-44d7-9d7c-10954e88bc95.png) | ![02](https://user-images.githubusercontent.com/28588878/151403161-9a6afc89-002c-449b-af6f-b016498152fc.png) | ![03](https://user-images.githubusercontent.com/28588878/151403185-f67fa9a2-000c-4193-804f-756df9841d92.png) |
 
-
-
+----
+# Authors
+1. Dr. Preetham Manjunatha
+2. Chaoyi Zhou (ChaoyiZh @https://github.com/ChaoyiZh)
