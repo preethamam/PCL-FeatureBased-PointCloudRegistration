@@ -1,7 +1,7 @@
 import os
 
 # modify this path to load the log files
-root_path = "/home/chaoyizh/workspace/SHM Lab/ret_log/"
+root_path = ""
 filenames = os.listdir(root_path)
 initial_success_comb = []
 total_success_comb = []
