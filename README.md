@@ -212,11 +212,11 @@ final_trans ="normal.sift.pfh.default.default.final_transformation_matrix.txt"
 ```
 Num of successful combinations:  560 / 2016
 Top 5 combinations are 
-Combinations:  normal.sift.ourcvfh.back.poly  Scores:  31.8838
-Combinations:  omp.sift.gasd.default.median  Scores:  31.8838
-Combinations:  normal.sift.gasd.back.median  Scores:  31.8838
-Combinations:  omp.sift.cvfh.default.median  Scores:  31.8838
-Combinations:  omp.sift.gasd.default.poly  Scores:  31.8838
+Combinations:  normal.iss3d.pfhrgb.back.default  Scores:  0.002926
+Combinations:  omp.iss3d.pfhrgb.back.default  Scores:  0.002926
+Combinations:  omp.susan.pfh.back.default  Scores:  0.00354727
+Combinations:  normal.susan.pfh.back.default  Scores:  0.00354727
+Combinations:  omp.susan.pfhrgb.back.default  Scores:  0.00432473
 ```
 - Visualization
 ![keypoints-Viewer](https://user-images.githubusercontent.com/90239950/161681138-2d2db002-d4ca-46af-930a-4098fd321742.png)
