@@ -2,7 +2,7 @@
 A computer program on PCL framework to register two point clouds using the feature-based keypoints (SIFT, SHOT, FPFH, etc.), local/global feature descriptors, followed by various correspondence estimation and rejection methods. Below summarizes the available keypoints, desciprtors, correspondence estimation and rejection methods that works in different combinations.
 
 ```
-May require Point Cloud Library (PCL) 1.11.0 -- Beast has 1.10.0 (check it)
+May require Point Cloud Library (PCL) > 1.11.0 
 Refer to: https://github.com/PointCloudLibrary/pcl/releases
 Refer to page 26, table, paper: A comprehensive review of 3D point cloud descriptors -- https://arxiv.org/abs/1802.02297
 
