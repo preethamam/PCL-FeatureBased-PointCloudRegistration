@@ -1,6 +1,78 @@
 # PCL feature-based point cloud registration
-A computer program on PCL framework to register two point clouds using the feature-based keypoints (SIFT, SHOT, FPFH).
+A computer program on PCL framework to register two point clouds using the feature-based keypoints (SIFT, SHOT, FPFH, etc.), local/global feature descriptors, followed by various correspondence estimation and rejection methods. Below summarizes the available keypoints, desciprtors, correspondence estimation and rejection methods that works in different combinations.
 
+```
+May require Point Cloud Library (PCL) 1.11.0 -- Beast has 1.10.0 (check it)
+Refer to: https://github.com/PointCloudLibrary/pcl/releases
+Refer to page 26, table, paper: A comprehensive review of 3D point cloud descriptors -- https://arxiv.org/abs/1802.02297
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Estimating Keypoints
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+pcl::NarfKeypoint **
+pcl::ISSKeypoint3D< PointInT, PointOutT, NormalT > **
+pcl::HarrisKeypoint3D< PointInT, PointOutT, NormalT > **
+pcl::HarrisKeypoint6D< PointInT, PointOutT, NormalT > **
+pcl::SIFTKeypoint< PointInT, PointOutT > ***
+pcl::SUSANKeypoint< PointInT, PointOutT, NormalT, IntensityT > **  Note: Carefully check if it needs RGB-D (check if depthmap or 3D point cloud) or point cloud XYZRGB
+pcl::TrajkovicKeypoint3D< PointInT, PointOutT, NormalT > ***
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Describing keypoints - Feature descriptors
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Local
+----------------
+pcl::ShapeContext3DEstimation< PointInT, PointNT, PointOutT > -- Outperform the Spin Image estimation (SI)
+pcl::PFHEstimation< PointInT, PointNT, PointOutT > -- Be invariant to position, orientation and point cloud density
+pcl::FPFHEstimation< PointInT, PointNT, PointOutT > -- Reduce time consuming of PFH
+pcl::FPFHEstimationOMP< PointInT, PointNT, PointOutT > -- ** Reduce time consuming of PFH
+pcl::NormalEstimation< PointInT, PointOutT >
+pcl::NormalEstimationOMP< PointInT, PointOutT > **
+pcl::NarfDescriptor -- ** Be invariant to rotation and outperform SI.
+pcl::IntensityGradientEstimation< PointInT, PointNT, PointOutT, IntensitySelectorT >
+pcl::MomentInvariantsEstimation< PointInT, PointOutT > **
+pcl::RSDEstimation< PointInT, PointNT, PointOutT > -- ** Be a fast feature estimation method 
+pcl::PrincipalCurvaturesEstimation< PointInT, PointNT, PointOutT > **
+pcl::IntensitySpinEstimation< PointInT, PointOutT >
+pcl::RIFTEstimation< PointInT, GradientT, PointOutT > -- ** RIFTEstimation estimates the Rotation Invariant Feature Transform descriptors for a given point cloud dataset containing points and intensity
+pcl::SHOTEstimationOMP< PointInT, PointNT, PointOutT, PointRFT > -- ** Outperform Spin Image estimation
+pcl::SHOTColorEstimationOMP< PointInT, PointNT, PointOutT, PointRFT > -- ** Outperform Spin Image estimation
+pcl::UniqueShapeContext< PointInT, PointOutT, PointRFT > -- Improve the accuracy and decrease memory cost of 3DSC
+
+----------------------------------------------------------------
+Global (may not work well for point/feature-based method)
+----------------------------------------------------------------
+pcl::OURCVFHEstimation< PointInT, PointNT, PointOutT > -- Outperform CVFH and SHOT
+pcl::CRHEstimation< PointInT, PointNT, PointOutT >
+pcl::CVFHEstimation< PointInT, PointNT, PointOutT > -- Outperform SI.
+pcl::GASDEstimation< PointInT, PointOutT > -- Outperform ESF, VFH and CVFH.
+pcl::GASDColorEstimation< PointInT, PointOutT > -- Outperform ESF, VFH and CVFH with color info.
+pcl::GRSDEstimation< PointInT, PointNT, PointOutT > -- Reduce the complexity to be linear in the number of points.
+pcl::ESFEstimation< PointInT, PointOutT > -- Ourperform SDVS,VFH, CVFH and GSHOT
+pcl::GFPFHEstimation< PointInT, PointLT, PointOutT > -- Achieve a high accuracy in terms of matching and classification
+pcl::VFHEstimation< PointInT, PointNT, PointOutT > -- Outperform SI and be fast and robust to large surface noise
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Correspondence Estimation
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+pcl::registration::CorrespondenceEstimation< PointSource, PointTarget, Scalar >
+pcl::registration::CorrespondenceEstimationBackProjection< PointSource, PointTarget, NormalT, Scalar >
+pcl::registration::CorrespondenceEstimationNormalShooting< PointSource, PointTarget, NormalT, Scalar >
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Correspondence rejection
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+pcl::registration::CorrespondenceRejectorSampleConsensus< PointT > ***
+pcl::registration::CorrespondenceRejectorDistance ***
+pcl::registration::CorrespondenceRejectorFeatures::FeatureContainer< FeatureT > **
+pcl::registration::CorrespondenceRejectorPoly< SourceT, TargetT >
+pcl::registration::CorrespondenceRejectorMedianDistance **
+pcl::registration::CorrespondenceRejectorSurfaceNormal **
+```
+-----
 ## Two point clouds registration with SIFT keypoints
 
 ## Requirements
