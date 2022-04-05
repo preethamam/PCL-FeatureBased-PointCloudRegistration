@@ -191,6 +191,7 @@ ICP_Max_Correspondence_Distance="0.4"
 
 ```
 ## Evaluation
+- change root_path to your result
 ```
 python evaluation.py
 ```
@@ -201,7 +202,7 @@ python registration_visualization.py
 ```
 - Change the path according to your own directory
 ```
-root_path = "/home/chaoyizh/workspace/SHM Lab/visualization_test1/"
+root_path = ""
 
 src_pcloud_filename = 'normal.sift.pfh.default.default.src_pcd.pcd'
 tgt_pcloud_filename = 'normal.sift.pfh.default.default.tgt_pcd.pcd'
