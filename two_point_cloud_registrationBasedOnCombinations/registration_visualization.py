@@ -52,7 +52,7 @@ def read_trans(path):
         trans.append(row)
     return trans
 
-root_path = "/home/chaoyizh/workspace/SHM Lab/visualization_test1/"
+root_path = ""
 
 
 src_pcloud_filename = 'normal.sift.pfh.default.default.src_pcd.pcd'
