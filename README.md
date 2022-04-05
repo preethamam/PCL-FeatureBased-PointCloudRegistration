@@ -118,7 +118,7 @@ Lastly, comment/uncomment relevant lines in the `void compute_Initial_Transforma
 -----
 # Two point clouds registration with all possible working keypoints, local and global descriptors, correspondences estimation and rejections
 ## Introduction
-- The original program has been prompted to a multiprocess program to run all the possible combinations of the functions provided for feature based point cloud registration. The code is in `two_pointcloud_registrationBasedOnCombinations`<br/>
+- The original program has been prompted to a multiprocess program to run all the possible combinations of the functions provided for feature based point cloud registration. The code is in `two_pointcloud_registration_combinations`<br/>
 - User can easily achieve the result by following the hyperparameters provided by us, or user is free to change and test by modifying them<br/>
 - The evaluation script and visulization script are also been included to find the good combinations and display the result for the registration
 - The flowchart for the prpgram
