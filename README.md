@@ -207,6 +207,8 @@ Combinations:  omp.sift.gasd.default.poly  Scores:  31.8838
 ![image](https://github.com/preethamam/PCL-FeatureBased-PointCloudRegistration/blob/main/visualization_results/initial-registration.png)
 ![image](https://github.com/preethamam/PCL-FeatureBased-PointCloudRegistration/blob/main/visualization_results/ICP-registration.png)
 
+----
+## Computational time and space complexity
 
 ----
 # Known issues
