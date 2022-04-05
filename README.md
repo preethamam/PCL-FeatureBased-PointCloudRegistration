@@ -115,6 +115,7 @@ Also depending on your point cloud complexity the hyperparameters (keypoints and
 
 Lastly, comment/uncomment relevant lines in the `void compute_Initial_Transformation` function when various Estimations and their corresponding Find correspondences between keypoint are used.
 
+-----
 # Two point clouds registration with all possible working keypoints, local and global descriptors, correspondences estimation and rejections
 ## Introduction
 - The original program has been prompted to a multiprocess program to run all the possible combinations of the functions provided for feature based point cloud registration. The code is in `two_pointcloud_registrationBasedOnCombinations`<br/>
