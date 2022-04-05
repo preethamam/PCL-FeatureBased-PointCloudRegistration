@@ -89,11 +89,21 @@ make -j8
 ```
 
 - Run the code
-User can run all the combinations by running the following command
+User can run all the combinations and save the log for the further evlaution by running the following command
 ```
 cd your work directory
 bash run.sh
 ```
+- Run code with console output
+```
+bash run_console.sh
+```
+- Or the user can run code with their own hyper parameters
+```
+bash run_customed.sh
+```
+
+
 User can also run single combination by running the following command
 ```
  ./build/project_two_pointcloud_registration --src "root path for dataset" --src_file "source pointcloud" --tgt_file "target point cloud" --normal "selection of normal computing function" --keypoint "selection of keypoints extrator" --feature "selection of feature descriptors" --correspondences "selection of finding correspondences" --reject "selection of rejecting bad correspondence" --ret "path to save the result"
@@ -169,15 +179,15 @@ Threshold='0.01f'
 normal_radius="0.1"
 
 # RANSAC
-RANSAC_Inlier_Threshold=0.2
-RANSAC_Iterations=5000
+RANSAC_Inlier_Threshold="0.2"
+RANSAC_Iterations="5000"
 
 # ICP hyper parameters
-ICP_Iterations=10000
-ICP_TransformationEpsilon=1e-6
-ICP_EuclideanFitnessEpsilon=1
-ICP_RANSAC_Inlier_Threshold=0.001
-ICP_Max_Correspondence_Distance=0.4
+ICP_Iterations="10000"
+ICP_TransformationEpsilon="1e-6"
+ICP_EuclideanFitnessEpsilon="1"
+ICP_RANSAC_Inlier_Threshold="0.001"
+ICP_Max_Correspondence_Distance="0.4"
 
 ```
 ## Evaluation
@@ -226,6 +236,7 @@ Combinations:  omp.susan.pfhrgb.back.default  Scores:  0.00432473
 
 ----
 ## Computational time and space complexity
+- A desktop computer using a 64-bit Ubuntu 20.04 operating system, 128 GB memory, and an AMD Ryzen ThreadRipper 2950x processor of 3.5 GHz 16 core processor<br/>
 To be added in recent future
 
 ----
