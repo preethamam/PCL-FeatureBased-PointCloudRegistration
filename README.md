@@ -51,7 +51,7 @@ Lastly, comment/uncomment relevant lines in the `void compute_Initial_Transforma
 - The flowchart for the prpgram
 
 
-![image](https://github.com/preethamam/PCL-FeatureBased-PointCloudRegistration/blob/main/flowchart.png)
+![flowchart](https://user-images.githubusercontent.com/90239950/161680597-b770b5eb-6597-48dc-99d2-99592cb9ad18.png)
 
 ## Requirements
 Ubuntu (20.04)<br/>
@@ -202,8 +202,8 @@ Combinations:  omp.sift.cvfh.default.median  Scores:  31.8838
 Combinations:  omp.sift.gasd.default.poly  Scores:  31.8838
 ```
 - Visualization
-![image](https://github.com/preethamam/PCL-FeatureBased-PointCloudRegistration/blob/main/visualization_results/keypoints-Viewer.png)
-![image](https://github.com/preethamam/PCL-FeatureBased-PointCloudRegistration/blob/main/visualization_results/Correspondence-viewer.png)
+![keypoints-Viewer](https://user-images.githubusercontent.com/90239950/161681138-2d2db002-d4ca-46af-930a-4098fd321742.png)
+![Correspondence-viewer](https://user-images.githubusercontent.com/90239950/161681161-2352e709-c236-4db9-afc8-2a2074770120.png)
 ![image](https://github.com/preethamam/PCL-FeatureBased-PointCloudRegistration/blob/main/visualization_results/initial-registration.png)
 ![image](https://github.com/preethamam/PCL-FeatureBased-PointCloudRegistration/blob/main/visualization_results/ICP-registration.png)
 
