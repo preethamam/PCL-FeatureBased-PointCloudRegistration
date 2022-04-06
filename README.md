@@ -123,8 +123,9 @@ Lastly, comment/uncomment relevant lines in the `void compute_Initial_Transforma
 - The evaluation script and visulization script are also been included to find the good combinations and display the result for the registration
 - The flowchart for the program
 
+![未命名文件](https://user-images.githubusercontent.com/90239950/161877700-8128e292-ad81-4637-a67a-011f69140507.jpg)
 
-![flowchart](https://user-images.githubusercontent.com/90239950/161680597-b770b5eb-6597-48dc-99d2-99592cb9ad18.png)
+
 
 ## Requirements
 Ubuntu (20.04)<br/>
