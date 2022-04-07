@@ -165,7 +165,7 @@ bash run_console.sh
 ```
 - Or the user can run code with their own hyper parameters
 ```
-bash run_customed.sh
+bash run_customized.sh
 ```
 
 
