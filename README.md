@@ -79,27 +79,27 @@ Run the C/C++ program: `two_pointcloud_registration.cpp`. Change the below varia
 Also depending on your point cloud complexity the hyperparameters (keypoints and correspondences) should be changed,
 
 ```cpp
-//// Hyper parameters (plate)
-// RANSAC hyper parameters
-#define LEAF_SIZE .1
-#define normal_radius 0.1
-#define feature_radius 0.1
-#define RANSAC_Inlier_Threshold 0.2  //0.2
+// Hyper parameters (room)
+
+#define LEAF_SIZE .01
+#define normal_radius 0.05
+#define feature_radius 0.05
+#define RANSAC_Inlier_Threshold .3
 #define RANSAC_Iterations 5000
-#define CorrRejDist_Maximum_Distance 0.7 //0.7
+#define CorrRejDist_Maximum_Distance 2
 
 // ICP hyper parameters
-#define ICP_Iterations 10000
+#define ICP_Iterations 5000
 #define ICP_TransformationEpsilon 1e-6
 #define ICP_EuclideanFitnessEpsilon  1
-#define ICP_RANSAC_Inlier_Threshold 0.001
-#define ICP_Max_Correspondence_Distance 0.4
+#define ICP_RANSAC_Inlier_Threshold 0.5
+#define ICP_Max_Correspondence_Distance 2
 
 // Parameters for sift computation
-#define min_scale .4
-#define nr_octaves 4
-#define nr_scales_per_octave 5
-#define min_contrast 0.25
+#define min_scale .05
+#define nr_octaves 8
+#define nr_scales_per_octave 3
+#define min_contrast 0.05
 ```
 
 Lastly, comment/uncomment relevant lines in the `void compute_Initial_Transformation` function when various Estimations and their corresponding Find correspondences between keypoint are used.
