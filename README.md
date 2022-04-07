@@ -303,8 +303,8 @@ Combinations:  omp.susan.pfhrgb.back.default  Scores:  0.00432473
 
 ----
 ## Computational time and space complexity
-- A desktop computer using a 64-bit Ubuntu 20.04 operating system, 128 GB memory, and an AMD Ryzen ThreadRipper 2950x processor of 3.5 GHz 16 core processor<br/>
-To be added in recent future
+- A desktop computer using a 64-bit Ubuntu 20.04 operating system, 128 GB memory, and an AMD Ryzen ThreadRipper 2950x processor of 3.5 GHz 16 core processor
+- The test is based on the Room data
 
 ----
 # Known issues
