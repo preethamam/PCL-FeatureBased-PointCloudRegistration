@@ -9,7 +9,6 @@ Refer to page 26, table, paper: A comprehensive review of 3D point cloud descrip
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 Estimating Keypoints
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
-pcl::NarfKeypoint **
 pcl::ISSKeypoint3D< PointInT, PointOutT, NormalT > **
 pcl::HarrisKeypoint3D< PointInT, PointOutT, NormalT > **
 pcl::HarrisKeypoint6D< PointInT, PointOutT, NormalT > **
@@ -25,32 +24,24 @@ Local
 ----------------
 pcl::ShapeContext3DEstimation< PointInT, PointNT, PointOutT > -- Outperform the Spin Image estimation (SI)
 pcl::PFHEstimation< PointInT, PointNT, PointOutT > -- Be invariant to position, orientation and point cloud density
+pcl::PFHRGBEstimation<pcl::PointXYZRGB, pcl::Normal, pcl::PFHRGBSignature250>
 pcl::FPFHEstimation< PointInT, PointNT, PointOutT > -- Reduce time consuming of PFH
 pcl::FPFHEstimationOMP< PointInT, PointNT, PointOutT > -- ** Reduce time consuming of PFH
 pcl::NormalEstimation< PointInT, PointOutT >
 pcl::NormalEstimationOMP< PointInT, PointOutT > **
-pcl::NarfDescriptor -- ** Be invariant to rotation and outperform SI.
 pcl::IntensityGradientEstimation< PointInT, PointNT, PointOutT, IntensitySelectorT >
-pcl::MomentInvariantsEstimation< PointInT, PointOutT > **
-pcl::RSDEstimation< PointInT, PointNT, PointOutT > -- ** Be a fast feature estimation method 
 pcl::PrincipalCurvaturesEstimation< PointInT, PointNT, PointOutT > **
-pcl::IntensitySpinEstimation< PointInT, PointOutT >
-pcl::RIFTEstimation< PointInT, GradientT, PointOutT > -- ** RIFTEstimation estimates the Rotation Invariant Feature Transform descriptors for a given point cloud dataset containing points and intensity
 pcl::SHOTEstimationOMP< PointInT, PointNT, PointOutT, PointRFT > -- ** Outperform Spin Image estimation
-pcl::SHOTColorEstimationOMP< PointInT, PointNT, PointOutT, PointRFT > -- ** Outperform Spin Image estimation
 pcl::UniqueShapeContext< PointInT, PointOutT, PointRFT > -- Improve the accuracy and decrease memory cost of 3DSC
 
 ----------------------------------------------------------------
 Global (may not work well for point/feature-based method)
 ----------------------------------------------------------------
 pcl::OURCVFHEstimation< PointInT, PointNT, PointOutT > -- Outperform CVFH and SHOT
-pcl::CRHEstimation< PointInT, PointNT, PointOutT >
 pcl::CVFHEstimation< PointInT, PointNT, PointOutT > -- Outperform SI.
 pcl::GASDEstimation< PointInT, PointOutT > -- Outperform ESF, VFH and CVFH.
 pcl::GASDColorEstimation< PointInT, PointOutT > -- Outperform ESF, VFH and CVFH with color info.
-pcl::GRSDEstimation< PointInT, PointNT, PointOutT > -- Reduce the complexity to be linear in the number of points.
 pcl::ESFEstimation< PointInT, PointOutT > -- Ourperform SDVS,VFH, CVFH and GSHOT
-pcl::GFPFHEstimation< PointInT, PointLT, PointOutT > -- Achieve a high accuracy in terms of matching and classification
 pcl::VFHEstimation< PointInT, PointNT, PointOutT > -- Outperform SI and be fast and robust to large surface noise
 
 
@@ -67,10 +58,8 @@ Correspondence rejection
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 pcl::registration::CorrespondenceRejectorSampleConsensus< PointT > ***
 pcl::registration::CorrespondenceRejectorDistance ***
-pcl::registration::CorrespondenceRejectorFeatures::FeatureContainer< FeatureT > **
 pcl::registration::CorrespondenceRejectorPoly< SourceT, TargetT >
 pcl::registration::CorrespondenceRejectorMedianDistance **
-pcl::registration::CorrespondenceRejectorSurfaceNormal **
 ```
 -----
 ## Two point clouds registration with SIFT keypoints
@@ -123,7 +112,7 @@ Lastly, comment/uncomment relevant lines in the `void compute_Initial_Transforma
 - The evaluation script and visulization script are also been included to find the good combinations and display the result for the registration
 - The flowchart for the program
 
-![未命名文件 (1)](https://user-images.githubusercontent.com/90239950/162027277-19d6c05a-a131-46be-a17d-3faa329302a0.png)
+![未命名文件 (2)](https://user-images.githubusercontent.com/90239950/162109262-78572536-af15-48b6-8e63-63575072e5f8.png)
 
 
 
@@ -304,10 +293,11 @@ Combinations:  normal.susan.pfh.back.default  Scores:  0.00354727
 Combinations:  omp.susan.pfhrgb.back.default  Scores:  0.00432473
 ```
 - Visualization
-![keypoints-Viewer](https://user-images.githubusercontent.com/90239950/161681138-2d2db002-d4ca-46af-930a-4098fd321742.png)
-![Correspondence-viewer](https://user-images.githubusercontent.com/90239950/161681161-2352e709-c236-4db9-afc8-2a2074770120.png)
-![Initial_Alignment](https://user-images.githubusercontent.com/90239950/161697823-d65bde47-6137-4d8a-9aa4-87f47db4f576.png)
-![ICP_Alignment](https://user-images.githubusercontent.com/90239950/161697948-e3bcee41-c99d-4565-a2a5-dd6dcfe53324.png)
+![Key-points](https://user-images.githubusercontent.com/90239950/162108671-714854d9-44e8-42d9-ad0c-1a3234316664.png)
+![Correspondence](https://user-images.githubusercontent.com/90239950/162108680-8347d33a-51ad-4b8f-9123-68e1b973b28b.png)
+![Initial Alignment](https://user-images.githubusercontent.com/90239950/162108683-661ef4c6-c13a-4af2-ac77-3572a7d4b217.png)
+![ICP Alignment](https://user-images.githubusercontent.com/90239950/162108686-6567f4c1-f10c-4a17-ab58-d11b461762df.png)
+
 
 ----
 ## Computational time and space complexity
