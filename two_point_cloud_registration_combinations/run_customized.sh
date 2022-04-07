@@ -13,11 +13,18 @@ tgt_file=""
 ret=""
 
 # Parameters for filtering
-LEAF_SIZE=""
+LEAF_SIZE="0.1"
 # Parameters for sift
-min_scale=""
-MinNeighbors=""
-NumberOfThreads=""
+min_scale="0.4"
+nr_octaves="4";
+nr_scales_per_octave="5";
+min_contrast="0.25";
+# Parameters iss3d
+model_resolution="0.2";
+Threshold21="0.975";
+Threshold32="0.975";
+MinNeighbors="5"
+NumberOfThreads="4"
 
 # susan
 radius='f'
@@ -86,7 +93,7 @@ do
             do
                 for r in ${reject[@]}
                 do
-                    ./build/project_two_pointcloud_registration --src $src --src_file $src_file --tgt_file $tgt_file --LEAF_SIZE $LEAF_SIZE --normal $n --keypoint $k --ICP_Iterations $ICP_Iterations --ICP_TransformationEpsilon $ICP_TransformationEpsilon --ICP_EuclideanFitnessEpsilon $ICP_EuclideanFitnessEpsilon --ICP_RANSAC_Inlier_Threshold $ICP_RANSAC_Inlier_Threshold --ICP_Max_Correspondence_Distance $ICP_Max_Correspondence_Distance--RANSAC_Inlier_Threshold $RANSAC_Inlier_Threshold --RANSAC_Iterations $RANSAC_Iterations --normal_radius $normal_radius --min_scale $min_scale --nr_octaves $nr_octaves --nr_scales_per_octave $nr_scales_per_octave --min_contrast $min_contrast --model_resolution $model_resolution --Threshold21 $Threshold21 --Threshold32 $Threshold32 --MinNeighbors $MinNeighbors --NumberOfThreads $NumberOfThreads --radius $radius --radiusSearch $radiusSearch --feature $f --correspondences $c --reject $r --ret "$ret/$n.$k.$f.$c.$r." >> "$ret/$n.$k.$f.$c.$r.log"&
+                    ./build/project_two_pointcloud_registrationBasedOnRegistration --src $src --src_file $src_file --tgt_file $tgt_file --LEAF_SIZE $LEAF_SIZE --normal $n --keypoint $k --ICP_Iterations $ICP_Iterations --ICP_TransformationEpsilon $ICP_TransformationEpsilon --ICP_EuclideanFitnessEpsilon $ICP_EuclideanFitnessEpsilon --ICP_RANSAC_Inlier_Threshold $ICP_RANSAC_Inlier_Threshold --ICP_Max_Correspondence_Distance $ICP_Max_Correspondence_Distance--RANSAC_Inlier_Threshold $RANSAC_Inlier_Threshold --RANSAC_Iterations $RANSAC_Iterations --normal_radius $normal_radius --min_scale $min_scale --nr_octaves $nr_octaves --nr_scales_per_octave $nr_scales_per_octave --min_contrast $min_contrast --model_resolution $model_resolution --Threshold21 $Threshold21 --Threshold32 $Threshold32 --MinNeighbors $MinNeighbors --NumberOfThreads $NumberOfThreads --radius $radius --radiusSearch $radiusSearch --feature $f --correspondences $c --reject $r --ret "$ret/$n.$k.$f.$c.$r." >> "$ret/$n.$k.$f.$c.$r.log"&
                 done
             done
         done
