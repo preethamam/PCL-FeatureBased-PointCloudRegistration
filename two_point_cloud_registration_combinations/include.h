@@ -85,7 +85,7 @@ void detect_keypoints_sift(pcl::PointCloud<pcl::PointXYZRGB>::Ptr &points,
 						   pcl::PointCloud<pcl::PointXYZRGB>::Ptr &keypoints_out);
 
 #include "functions/compute_normal.cpp"
-#include "functions/coonpute_Gradient.cpp"
+#include "functions/comnpute_gradient.cpp"
 #include "functions/extract_keypoints.cpp"
 #include "functions/describe_feature.cpp"
 #include "functions/compute_correspondence_default.cpp"
