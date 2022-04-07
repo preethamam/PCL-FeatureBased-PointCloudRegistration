@@ -140,6 +140,8 @@ pip install open3d
 |  |--include.h (all the header files)
 |  |--functions (implementation of all the functions)
 |  |--run.sh (bash script to run the program)
+|  |--run_customized.sh (bash script to run the program)
+|  |--run_display.sh (bash script to run the program)
 |  |--evalution.py
 |  |--registration_visualization.py
 ```
