@@ -73,7 +73,7 @@ Tested on Visual Studio 2017 and 2019
 Run the C/C++ program: `two_pointcloud_registration.cpp`. Change the below variables:
 |                                                      From                                                      |                                     To                                    |
 |:--------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------:|
-| ```string src_file = "Plate_no_change_500000_scaled.pcd"; string tgt_file = "Plate_change_500000.pcd"; ``` | ```string src_file = "bunny.pcd"; string tgt_file = "bunny2.pcd";``` |
+| ```string src_file = "Plate_no_change_500000_scaled.pcd"; string tgt_file = "Plate_change_500000.pcd"; ``` | ```string src_file = "1189_kinect_v2_scene_1.pcd"; string tgt_file = "1189_kinect_v2_scene_2_rottranslated.pcd";``` |
 | `string src_tgt_filepath = "D:\\OneDrive\\Team Work\\Team PCloud\\3D models\\PCL\\";`                          | `string src_tgt_filepath = your\directory`                                |
 
 Also depending on your point cloud complexity the hyperparameters (keypoints and correspondences) should be changed,
@@ -140,8 +140,8 @@ pip install open3d
 |  |--include.h (all the header files)
 |  |--functions (implementation of all the functions)
 |  |--run.sh (bash script to run the program)
-|  |--run_customized.sh (bash script to run the program)
-|  |--run_display.sh (bash script to run the program)
+|  |--run_customized.sh (bash script which can be modified by the user to run the program)
+|  |--run_console.sh (bash script to run the program with console output)
 |  |--evalution.py
 |  |--registration_visualization.py
 ```
