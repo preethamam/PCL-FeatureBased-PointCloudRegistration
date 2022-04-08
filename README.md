@@ -305,7 +305,7 @@ Combinations:  omp.susan.pfhrgb.back.default  Scores:  0.00432473
 ----
 ## Computational time and space complexity
 - A desktop computer using a 64-bit Ubuntu 20.04 operating system, 128 GB memory, and an AMD Ryzen ThreadRipper 2950x processor of 3.5 GHz 16 core processor
-- The total running times for the test based on room model is 2h 11 minutes.
+- The total running times for the test based on room model is 2 hours 11 minutes.
 
 ----
 # Known issues
