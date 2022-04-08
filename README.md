@@ -297,14 +297,15 @@ Combinations:  omp.susan.pfhrgb.back.default  Scores:  0.00432473
 - Visualization
 ![Key-points](https://user-images.githubusercontent.com/90239950/162108671-714854d9-44e8-42d9-ad0c-1a3234316664.png)
 ![Correspondence](https://user-images.githubusercontent.com/90239950/162108680-8347d33a-51ad-4b8f-9123-68e1b973b28b.png)
-![Initial Alignment](https://user-images.githubusercontent.com/90239950/162108683-661ef4c6-c13a-4af2-ac77-3572a7d4b217.png)
-![ICP Alignment](https://user-images.githubusercontent.com/90239950/162108686-6567f4c1-f10c-4a17-ab58-d11b461762df.png)
+![image](https://user-images.githubusercontent.com/90239950/162348719-7c574b4b-6d4e-4780-83d9-6c5ee10aa7e0.png)
+![image](https://user-images.githubusercontent.com/90239950/162348530-4a3f2b2f-6dd6-4a67-9a6b-b7e01a221e38.png)
+
 
 
 ----
 ## Computational time and space complexity
 - A desktop computer using a 64-bit Ubuntu 20.04 operating system, 128 GB memory, and an AMD Ryzen ThreadRipper 2950x processor of 3.5 GHz 16 core processor
-- The test is based on the Room data
+- The total running times for the test bsaed on room model is 2h 11mins.
 
 ----
 # Known issues
